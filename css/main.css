@@ -1,0 +1,21 @@
+/*
+font-family: 'Work Sans', sans-serif;
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --title-color: #322153;
+    --primary-color: #34cb79;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+    background: #f0f0f5;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--title-color);
+}

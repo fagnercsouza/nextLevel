@@ -1,22 +1,7 @@
-/*
-font-family: 'Work Sans', sans-serif;
-*/
-
-:root{
-    --title-color: #322153;
-    --primary-color: #34cb79;
-}
-body{
-    font-family: 'Work Sans', sans-serif;
-    background: #f0f0f5;
-}
-a {
-    text-decoration: none;
-}
 #page-home{
     height: 100vh;
-    background: url('./assets/icones/home-background.svg') no-repeat;
-    background-position: 35vw bottom;
+    background: url('../assets/icones/home-background.svg') no-repeat;
+    background-position: 35vw 15vh;
 }
 #page-home .content{
     width: 90%;
@@ -39,7 +24,7 @@ a {
 }
 #page-home header a span{
     margin-right: 16px;
-    background-image: url('./assets/icones/log-in.svg');
+    background-image: url('../assets/icones/log-in.svg');
     width: 20px;
     height: 20px;
 }
@@ -88,29 +73,11 @@ a {
 }
 #page-home main a span::after{
     content: "";
-    background-image: url('./assets/icones/search.svg');
+    background-image: url('../assets/icones/search.svg');
     width: 20px;
     height: 20px;
 }
 #page-home main a strong{
     flex: 1;
     text-align: center;
-}
-@media (max-width: 900px){
-    #page-home{
-        background-position: 70vw;
-    }
-    #page-home .content{
-        align-items: center;
-        text-align: center;
-    }
-    #page-home header a {
-        position: absolute;
-        bottom: 48px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    #page-home main {
-        align-items: center;
-    }
 }
