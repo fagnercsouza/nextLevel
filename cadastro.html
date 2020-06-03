@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/geral.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <title>Next Level</title>
+</head>
+<body>
+    <div id="page-cadastro">
+        <header>
+            <img src="/assets/icones/logo.svg" alt="logomarca">
+            <a href="index.html">
+                <span></span>
+                Voltar para home</a>
+        </header>
+        <form action="">
+            <h1>Cadastro do ponto de coleta</h1>
+            <fieldset>
+                <legend><h2>Dados da entidade</h2></legend>
+                <div class="field">
+                    <label for="name">Nome da entidade</label>
+                    <input type="text" name="name">
+                </div>
+                <div class="field-group">
+                    <div class="field">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" name="endereco">
+                    </div>
+                    <div class="field">
+                        <label for="numero">Número/Complemento</label>
+                        <input type="text" name="numero">
+                    </div>
+                </div>
+                <div class="field-group">
+                    <div class="field">
+                        <label for="uf">Estado</label>
+                        <select name="uf" id="uf">
+                            <option value="">Selecione o Estado</option>
+                            
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="cidade">Cidade</label>
+                        <select name="cidade" id="" disabled>
+                            <option value="">Selecione a cidade</option>
+                        </select>
+                    </div>
+                    
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend><h2>Itens de coleta</h2></legend>
+
+            </fieldset>
+            <button>Cadastrar ponto de coleta</button>
+        </form>
+    </div>
+    <script src="./js/cadastro.js"></script>
+</body>
+</html>

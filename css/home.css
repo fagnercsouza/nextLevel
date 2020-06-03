@@ -58,7 +58,7 @@
     color: #fff;
 }
 #page-home main a:hover{
-    background-color: #0fb86e;
+    background-color: var(--hover-color);
 }
 #page-home main a span{
     width: 72px;
