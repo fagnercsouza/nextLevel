@@ -20,6 +20,14 @@
     #page-home main {
         align-items: center;
     }
+    #page-resultado .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 600px){
+    #page-resultado .cards{
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-height: 700px){

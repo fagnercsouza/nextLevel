@@ -11,7 +11,7 @@
 <body>
     <div id="page-cadastro">
         <header>
-            <img src="/assets/icones/logo.svg" alt="logomarca">
+            <img src="/assets/logo.svg" alt="logomarca">
             <a href="index.html">
                 <span></span>
                 Voltar para home</a>
@@ -45,15 +45,42 @@
                     <div class="field"> 
                         <label for="cidade">Cidade</label>
                         <select name="cidade" id="cidade" disabled>
-                            <option value="">Selecione a cidade</option>
+                            <option value="">Selecione a Cidade</option>
                         </select>
                     </div>
                     
                 </div>
             </fieldset>
             <fieldset>
-                <legend><h2>Itens de coleta</h2></legend>
-
+                <legend>
+                     <h2>Itens de coleta</h2></legend>
+                <div class="items-grid">
+                    <li data-id="1" >
+                        <img src="./assets/lampadas.svg" alt="lâmpada">
+                        <span>Lâmpada</span>
+                    </li>
+                    <li data-id="2">
+                        <img src="./assets/baterias.svg" alt="Bateria">
+                        <span>Pilhas e Baterias</span>
+                    </li>
+                    <li data-id="3">
+                        <img src="./assets/papeis-papelao.svg" alt="Papéis">
+                        <span>Papéis e Papelão</span>
+                    </li>
+                    <li data-id="4">
+                        <img src="./assets/eletronicos.svg" alt="Eletrônicos">
+                        <span>Resíduos Eletrônicos</span>
+                    </li>
+                    <li data-id="5">
+                        <img src="./assets/organicos.svg" alt="Resíduos Orgânicos">
+                        <span>Resíduos Orgânicos</span>
+                    </li>
+                    <li data-id="6">
+                        <img src="./assets/oleo.svg" alt="Óleo de cozinha">
+                        <span>Óleo de Cozinha</span>
+                    </li>
+                </div>
+                <input type="hidden" name="items">
             </fieldset>
             <button>Cadastrar ponto de coleta</button>
         </form>

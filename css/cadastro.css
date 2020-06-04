@@ -20,7 +20,7 @@
 }
 #page-cadastro header a span{
     margin-right: 10px;
-    background-image: url('../assets/icones/arrow-left.svg');
+    background-image: url('../assets/arrow-left.svg');
     /* display: flex; */
     width: 20px;
     height: 24px;
@@ -92,4 +92,42 @@ form button{
 }
 form button:hover{
     background-color: var(--hover-color);
+}
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+.items-grid li{
+    background-color: #f0f0f5;
+    list-style: none;
+    border: 2px solid #f0f0f5;
+    border-radius: 8px;
+
+    height: 180px;
+    padding: 32px 24px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;
+    cursor: pointer;
+}
+.items-grid li span{
+    margin-top: 12px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: var(--title-color);
+}
+.items-grid li.selected {
+    background: #e1faec;
+    border: 2px solid #36cb79;
+}
+
+.items-grid li img,
+.items-grid li span {
+    pointer-events: none;
 }
