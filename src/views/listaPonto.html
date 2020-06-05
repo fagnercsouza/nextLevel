@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/geral.css">
+{% extends "layout.html" %}
+{% set pageId = "page-resultado" %}
+{% block styles %}
     <link rel="stylesheet" href="./css/grid.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-    <title>Next Level</title>
-</head>
-<body>
-    <div id="page-resultado">
-        <header>
-            <img src="/assets/logo.svg" alt="logomarca">
-            <a href="/">
-                <span></span>
-                Voltar para home</a>
-        </header>
+{% endblock styles %}
+{% block title %}
+    <title>Next Level - Pontos Cadastrados</title>
+{% endblock title %}
+{% block contant %}
+ 
+        {% include "header.html" %}
         <main>
             <h4>
                 <strong>2 pontos</strong> encontrados
@@ -63,7 +56,8 @@
                 </div>
             </div>
         </main>
-    </div>
+  
+{% endblock contant %}
+{% block script %}
     <script src="./js/cadastroEndereco.js"></script>
-</body>
-</html>
+{% endblock script %}

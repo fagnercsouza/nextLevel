@@ -1,90 +1,89 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/geral.css">
-    <link rel="stylesheet" href="./css/cadastro.css">
-    <link rel="stylesheet" href="./css/responsive.css">
-    <title>Next Level</title>
-</head>
-<body>
-    <div id="page-cadastro">
-        <header>
-            <img src="/assets/logo.svg" alt="logomarca">
-            <a href="index.html">
-                <span></span>
-                Voltar para home</a>
-        </header>
-        <form action="">
-            <h1>Cadastro do ponto de coleta</h1>
-            <fieldset>
-                <legend><h2>Dados da entidade</h2></legend>
-                <div class="field">
-                    <label for="name">Nome da entidade</label>
-                    <input type="text" name="name">
-                </div>
-                <div class="field-group">
-                    <div class="field">
-                        <label for="endereco">Endereço</label>
-                        <input type="text" name="endereco">
-                    </div>
-                    <div class="field">
-                        <label for="numero">Número/Complemento</label>
-                        <input type="text" name="numero">
-                    </div>
-                </div>
-                <div class="field-group">
-                    <div class="field">
-                        <label for="uf">Estado</label>
-                        <select name="uf" id="uf">
-                            <option value="">Selecione o Estado</option>
-                        </select>
-                        <input type="hidden" name="estado">
-                    </div>
-                    <div class="field"> 
-                        <label for="cidade">Cidade</label>
-                        <select name="cidade" id="cidade" disabled>
-                            <option value="">Selecione a Cidade</option>
-                        </select>
-                    </div>
-                    
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>
-                     <h2>Itens de coleta</h2></legend>
-                <div class="items-grid">
-                    <li data-id="1" >
-                        <img src="./assets/lampadas.svg" alt="lâmpada">
-                        <span>Lâmpada</span>
-                    </li>
-                    <li data-id="2">
-                        <img src="./assets/baterias.svg" alt="Bateria">
-                        <span>Pilhas e Baterias</span>
-                    </li>
-                    <li data-id="3">
-                        <img src="./assets/papeis-papelao.svg" alt="Papéis">
-                        <span>Papéis e Papelão</span>
-                    </li>
-                    <li data-id="4">
-                        <img src="./assets/eletronicos.svg" alt="Eletrônicos">
-                        <span>Resíduos Eletrônicos</span>
-                    </li>
-                    <li data-id="5">
-                        <img src="./assets/organicos.svg" alt="Resíduos Orgânicos">
-                        <span>Resíduos Orgânicos</span>
-                    </li>
-                    <li data-id="6">
-                        <img src="./assets/oleo.svg" alt="Óleo de cozinha">
-                        <span>Óleo de Cozinha</span>
-                    </li>
-                </div>
-                <input type="hidden" name="items">
-            </fieldset>
-            <button>Cadastrar ponto de coleta</button>
-        </form>
-    </div>
-    <script src="./js/cadastroEndereco.js"></script>
-</body>
-</html>
+{% extends "layout.html" %}
+{% set pageId = "page-cadastro" %}
+
+{% block styles %}
+<link rel="stylesheet" href="./css/cadastro.css">
+{% endblock styles %}
+
+{% block title %}
+<title>Next Level - Cadastro</title>
+{% endblock title%}
+
+{% block contant %}
+{% include "header.html" %}
+<form action="">
+    <h1>Cadastro do ponto de coleta</h1>
+    <fieldset>
+        <legend>
+            <h2>Dados da entidade</h2>
+        </legend>
+        <div class="field">
+            <label for="name">Nome da entidade</label>
+            <input type="text" name="name">
+        </div>
+        <div class="field-group">
+            <div class="field">
+                <label for="endereco">Endereço</label>
+                <input type="text" name="endereco">
+            </div>
+            <div class="field">
+                <label for="numero">Número/Complemento</label>
+                <input type="text" name="numero">
+            </div>
+        </div>
+        <div class="field-group">
+            <div class="field">
+                <label for="uf">Estado</label>
+                <select name="uf" id="uf">
+                    <option value="">Selecione o Estado</option>
+                </select>
+                <input type="hidden" name="estado">
+            </div>
+            <div class="field">
+                <label for="cidade">Cidade</label>
+                <select name="cidade" id="cidade" disabled>
+                    <option value="">Selecione a Cidade</option>
+                </select>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>
+            <h2>Itens de coleta</h2>
+            <span>Selecione um ou mais intens abaixo</span>
+        </legend>
+        <div class="items-grid">
+            <li data-id="1">
+                <img src="./assets/lampadas.svg" alt="lâmpada">
+                <span>Lâmpada</span>
+            </li>
+            <li data-id="2">
+                <img src="./assets/baterias.svg" alt="Bateria">
+                <span>Pilhas e Baterias</span>
+            </li>
+            <li data-id="3">
+                <img src="./assets/papeis-papelao.svg" alt="Papéis">
+                <span>Papéis e Papelão</span>
+            </li>
+            <li data-id="4">
+                <img src="./assets/eletronicos.svg" alt="Eletrônicos">
+                <span>Resíduos Eletrônicos</span>
+            </li>
+            <li data-id="5">
+                <img src="./assets/organicos.svg" alt="Resíduos Orgânicos">
+                <span>Resíduos Orgânicos</span>
+            </li>
+            <li data-id="6">
+                <img src="./assets/oleo.svg" alt="Óleo de cozinha">
+                <span>Óleo de Cozinha</span>
+            </li>
+        </div>
+        <input type="hidden" name="items">
+    </fieldset>
+    <button>Cadastrar ponto de coleta</button>
+</form>
+{% endblock contant %}
+
+{% block script %}
+<script src="./js/cadastroEndereco.js"></script>
+{% endblock script %}
