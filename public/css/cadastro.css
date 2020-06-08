@@ -7,9 +7,9 @@
 
 #page-cadastro header{
     margin-top: 30px;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 #page-cadastro header a {
     color: var(--title-color);
