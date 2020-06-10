@@ -57,7 +57,7 @@
     border: 0;
     padding: 16px 24px;
     font-size: 16px;
-    color: #f0f5f1;
+    color: rgb(20, 19, 19);
 }
 #modal form button{
     width: 72px;
@@ -69,4 +69,14 @@
 }
 #modal form button:hover{
     background-color: var(--hover-color);
+}
+
+#modal.point .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#modal.point h1{
+    color: #fff;
+    margin-top: 32px;
 }

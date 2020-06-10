@@ -9,52 +9,37 @@
 {% block contant %}
  
         {% include "header.html" %}
+
         <main>
+            {% if total > 0 %}
+
+                <h4>
+                    <strong>{{total}} pontos</strong> encontrados
+                </h4>
+                <div class="cards">
+
+                    {% for local in locais %}
+                        <div class="card">
+                            <img src="./assets/pontos.jpg" alt="Colectoria">
+                            <h1>{{local.nome}}</h1>
+                            <h3>{{local.itens}}</h3>
+                            <p>
+                                {{local.cidade}}, {{local.estado}} </br>
+                                {{local.endereco}}</br>
+                                Numero: {{local.numero}}
+                            </p>
+                        </div>
+
+                    {% endfor %}
+                
+                </div>
+
+            {% else %}
             <h4>
-                <strong>2 pontos</strong> encontrados
+                <strong>Nenhum local</strong> encontrado!
             </h4>
-            <div class="cards">
-                <div class="card">
-                    <img src="./assets/ponto-eletronico.jpg" alt="Colectoria">
-                    <h1>Colectoria</h1>
-                    <h3>Resíduos Eletrônicos, Lâmpadas</h3>
-                    <p>
-                        Cidade Ocidental, Goiás </br>
-                        Sq 12, quadra 2, Centro </br>
-                        Casa 44
-                    </p>
-                </div>
-                <div class="card">
-                    <img src="./assets/ponto-organico.jpg" alt="Papersider">
-                    <h1>Papersider</h1>
-                    <h3>Resíduos Orgânicos, Óleo de Cozinha</h3>
-                    <p>
-                        Cidade Ocidental, Goiás </br>
-                        Sq 12, quadra 2, Centro </br>
-                        Casa 44
-                    </p>
-                </div>
-                <div class="card">
-                    <img src="./assets/ponto-eletronico.jpg" alt="Colectoria">
-                    <h1>Colectoria</h1>
-                    <h3>Resíduos Eletrônicos, Lâmpadas</h3>
-                    <p>
-                        Cidade Ocidental, Goiás </br>
-                        Sq 12, quadra 2, Centro </br>
-                        Casa 44
-                    </p>
-                </div>
-                <div class="card">
-                    <img src="./assets/ponto-organico.jpg" alt="Papersider">
-                    <h1>Papersider</h1>
-                    <h3>Resíduos Orgânicos, Óleo de Cozinha</h3>
-                    <p>
-                        Cidade Ocidental, Goiás </br>
-                        Sq 12, quadra 2, Centro </br>
-                        Casa 44
-                    </p>
-                </div>
-            </div>
+            {% endif %}
+            
         </main>
   
 {% endblock contant %}

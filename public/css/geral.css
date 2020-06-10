@@ -9,7 +9,8 @@ font-family: 'Work Sans', sans-serif;
 }
 :root{
     --title-color: #322153;
-    --primary-color: #34cb79;
+    /* --primary-color: #34cb79; */
+    --primary-color: #239768;
     --hover-color: #0fb86e;
 }
 body{
